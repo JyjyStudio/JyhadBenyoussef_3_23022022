@@ -2,10 +2,13 @@
   "name": "projet-3",
   "version": "1.0.0",
   "description": "Site Ohmyfood",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass": "sass --watch sass:css --no-source-map",
+    "sass-compressed": "sass --watch sass:css --style compressed --no-source-map"
   },
   "author": "Jyhad Ben Youssef",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.49.8"
+  }
 }
