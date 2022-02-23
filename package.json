@@ -4,7 +4,9 @@
   "description": "Site Ohmyfood",
   "scripts": {
     "sass": "sass --watch sass:css --no-source-map",
-    "sass-compressed": "sass --watch sass:css --style compressed --no-source-map"
+    "sass-compressed": "sass --watch sass:css --style compressed --no-source-map",
+    "live-server" : "live-server",
+    "sass-live-server" : "npm-run-all --parallel live-server sass"
   },
   "author": "Jyhad Ben Youssef",
   "license": "ISC",
