@@ -1,4 +1,76 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", arial, sans-serif;
+}
+
+.btn {
+  text-align: inherit;
+  border-radius: 10px;
+  margin: 0 auto 20px;
+  cursor: pointer;
+  color: #000;
+  background: #f6f6f6;
+  width: 90%;
+  padding: 15px;
+  border: none;
+  box-shadow: 0 3px 7px #d0d0d0;
+}
+.btn i {
+  color: gray;
+  padding: 0 20px 0 35px;
+}
+.btn--header {
+  border-radius: 25px;
+  margin: 0 auto 10px;
+  cursor: pointer;
+  color: #fff;
+  background: linear-gradient(#FF79DA, #9356DC);
+  width: 220px;
+  padding: 15px;
+  border: none;
+  box-shadow: inset 0 5px 5px -5px;
+}
+
 h1 {
-    font-family: 'shrikhand', arial, sans-serif;
-    text-align: center;
+  font-family: "shrikhand", arial, sans-serif;
+  text-align: center;
+}
+
+.localisation {
+  background-color: #e9e9e9;
+  text-align: center;
+  padding: 15px 0;
+  box-shadow: inset 0 5px 5px -5px #777777;
+}
+.localisation .fa-solid {
+  padding-right: 15px;
+}
+
+.slogan {
+  background-color: #f6f6f6;
+  text-align: center;
+  padding: 30px;
+  display: grid;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+.slogan__title {
+  margin: 0;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.slogan__text {
+  font-weight: 100;
+}
+
+.fonctionnement {
+  margin-left: 20px;
+}
+.fonctionnement h2 {
+  margin-bottom: 30px;
 }
