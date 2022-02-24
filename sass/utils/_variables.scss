@@ -10,4 +10,5 @@ $regular-shadow : 0 3px 7px darken($background-color, 15%);
 $shadow : (
     localisation : $top-shadow,
     btn : $regular-shadow,
+    card : $regular-shadow,
 );
