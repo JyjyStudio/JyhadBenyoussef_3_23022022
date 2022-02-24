@@ -64,7 +64,9 @@ input {
     right: 25px;
     top: 15px;
     z-index: -1;
-    display: none;
+    -webkit-appearance: none;
+   -moz-appearance: none;
+        appearance: none;
 }  
 .checked-heart {
     opacity: 0;
