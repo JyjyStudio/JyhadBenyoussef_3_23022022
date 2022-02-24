@@ -36,11 +36,13 @@
         }
         &__content {
             padding: 10px;
-            display: flex;
-            justify-content: space-between;
+            position: relative;
             & i {
                 padding: 10px 20px;
                 font-size: 25px;
+                position: absolute;
+                right: 0;
+                top: 0;
             }
         }
         &__title {
@@ -54,3 +56,40 @@
     padding-bottom: 20px;
     box-shadow: map-get($shadow, card);
 }
+
+// Heart Animation
+
+input {
+    display: none
+}  
+.checked-heart {
+    opacity: 0;
+}
+#heart1:checked + label,
+#heart2:checked + label,
+#heart3:checked + label,
+#heart4:checked + label {
+    .checked-heart {
+        opacity: 1;
+        animation-name: fill;
+        animation-duration: 300ms;
+        animation-timing-function: ease-out;
+        animation-iteration-count: 1;
+        color: tomato;
+    }
+}
+@keyframes fill {
+    0% {
+      opacity : 0;
+    }
+    33% {
+        opacity : 33%;
+    }
+    66% {
+        opacity : 66%;
+    }
+    100% {
+        opacity : 100%;
+    }
+  }
+  
