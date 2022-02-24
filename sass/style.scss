@@ -1,4 +1,9 @@
-h1 {
-    font-family: 'shrikhand', arial, sans-serif;
-    text-align: center;
-}
+@import 'utils/variables';
+@import 'utils/mixins';
+
+@import 'base/base';
+
+@import 'components/btn';
+
+@import 'layouts/header';
+@import 'layouts/fonctionnement';

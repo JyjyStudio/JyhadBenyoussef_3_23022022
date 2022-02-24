@@ -1,0 +1,29 @@
+h1 {
+    font-family: 'shrikhand', arial, sans-serif;
+    text-align: center;
+}
+.localisation {
+    background-color: darken($background-color, 5%);
+    text-align: center;
+    padding: 15px 0;
+    @include background-shadow();
+    .fa-solid {
+        padding-right: 15px;
+    }
+}
+.slogan {
+    background-color: $background-color;
+    text-align: center;
+    padding: 30px;
+    display: grid;
+    gap: 30px;
+    margin-bottom: 30px;
+    &__title {
+        margin: 0;
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+    &__text {
+        font-weight: 100;
+    }
+}

@@ -1,0 +1,15 @@
+.btn {
+    text-align : inherit;
+    border-radius: 10px;
+    margin: 0 auto 20px;
+    @include btn;
+    i {
+        color : gray;
+        padding : 0 20px 0 35px;
+    }
+    &--header {
+        border-radius: 25px;
+        margin: 0 auto 10px;
+        @include btn('localisation', #fff, linear-gradient($secondary-color, $primary-color), 220px);
+    }
+}
