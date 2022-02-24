@@ -13,6 +13,7 @@
             color : $primary-color;
         }
         background: pastel($primary-color);
+        box-shadow : map-get($shadow, hover-btn);
     }
     &--header {
         border-radius: 25px;
