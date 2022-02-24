@@ -161,6 +161,10 @@ h1 {
 }
 
 input {
+  position: absolute;
+  right: 25px;
+  top: 15px;
+  z-index: -1;
   display: none;
 }
 

@@ -60,7 +60,11 @@
 // Heart Animation
 
 input {
-    display: none
+    position: absolute;
+    right: 25px;
+    top: 15px;
+    z-index: -1;
+    display: none;
 }  
 .checked-heart {
     opacity: 0;
