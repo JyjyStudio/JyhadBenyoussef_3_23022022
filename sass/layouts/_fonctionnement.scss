@@ -4,3 +4,12 @@
         margin-bottom: 30px;
     }
 }
+.number {
+    background-color: $primary-color;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 15px;
+    position: absolute;
+    left: -10px;
+    top: 12px;
+}
