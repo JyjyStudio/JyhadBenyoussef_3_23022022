@@ -6,9 +6,11 @@ $background-color : #f6f6f6;
 //listes
 $top-shadow : inset 0 5px 5px -5px; 
 $regular-shadow : 0 3px 7px darken($background-color, 15%); 
+$dark-shadow : 0 3px 7px darken($background-color, 25%); 
 //maps
 $shadow : (
     localisation : $top-shadow,
     btn : $regular-shadow,
+    hover-btn : $dark-shadow,
     card : $regular-shadow,
 );
