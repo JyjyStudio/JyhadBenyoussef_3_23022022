@@ -11,8 +11,7 @@ body {
 .btn {
   text-align: inherit;
   border-radius: 10px;
-  margin: 0 10px 20px;
-  position: relative;
+  margin: 0 auto 20px;
   cursor: pointer;
   color: #000;
   background: #f6f6f6;
@@ -24,12 +23,6 @@ body {
 .btn i {
   color: gray;
   padding: 0 20px 0 35px;
-}
-.btn:hover {
-  background: #f1e6ff;
-}
-.btn:hover i {
-  color: #9356DC;
 }
 .btn--header {
   border-radius: 25px;
@@ -80,14 +73,4 @@ h1 {
 }
 .fonctionnement h2 {
   margin-bottom: 30px;
-}
-
-.number {
-  background-color: #9356DC;
-  color: #fff;
-  padding: 5px 10px;
-  border-radius: 15px;
-  position: absolute;
-  left: -10px;
-  top: 12px;
 }
