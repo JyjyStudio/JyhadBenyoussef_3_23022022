@@ -168,6 +168,7 @@ input {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  display: block;
 }
 
 .checked-heart {
