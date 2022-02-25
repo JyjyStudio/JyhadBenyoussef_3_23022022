@@ -38,11 +38,12 @@
             padding: 10px;
             position: relative;
             & i {
-                padding: 10px 20px;
+                cursor: pointer;
+                // padding: 10px 20px;
                 font-size: 25px;
                 position: absolute;
-                right: 0;
-                top: 0;
+                right: 20px;
+                top: 20px;
             }
         }
         &__title {
@@ -59,16 +60,11 @@
 
 // Heart Animation
 
-input {
-    position: absolute;
-    right: 25px;
-    top: 15px;
-    z-index: -1;
-    -webkit-appearance: none;
-   -moz-appearance: none;
-        appearance: none;
-        display: block;
-}  
+input[type="radio"], input[type="checkbox"] {
+    appearance: none;
+    display: none
+} 
+
 .checked-heart {
     opacity: 0;
 }
@@ -77,12 +73,8 @@ input {
 #heart3:checked + label,
 #heart4:checked + label {
     .checked-heart {
-        display: block;
         opacity: 1;
-        animation-name: fill;
-        animation-duration: 300ms;
-        animation-timing-function: ease-out;
-        animation-iteration-count: 1;
+        animation: fill 300ms ease-out 1;
         color: tomato;
     }
 }
