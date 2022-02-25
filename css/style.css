@@ -178,6 +178,7 @@ input {
 #heart2:checked + label .checked-heart,
 #heart3:checked + label .checked-heart,
 #heart4:checked + label .checked-heart {
+  display: block;
   opacity: 1;
   animation-name: fill;
   animation-duration: 300ms;
