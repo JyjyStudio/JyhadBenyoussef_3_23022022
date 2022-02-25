@@ -13,6 +13,56 @@ a {
   text-decoration: none;
 }
 
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  animation: fadeOut 4s ease-in-out 1;
+  opacity: 0;
+}
+
+.spinner {
+  height: 50px;
+  width: 50px;
+  border: 2px black solid;
+  border-left: none;
+  border-radius: 9999px;
+  opacity: 0;
+  animation-name: rotate, fadeIn;
+  animation-duration: 800ms, 2500ms;
+  animation-timing-function: linear, ease;
+  animation-iteration-count: infinite, 1;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .btn {
   text-align: inherit;
   border-radius: 10px;
@@ -161,14 +211,7 @@ h1 {
 }
 
 input {
-  position: absolute;
-  right: 25px;
-  top: 15px;
-  z-index: -1;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  display: block;
+  display: none;
 }
 
 .checked-heart {
@@ -179,12 +222,8 @@ input {
 #heart2:checked + label .checked-heart,
 #heart3:checked + label .checked-heart,
 #heart4:checked + label .checked-heart {
-  display: block;
   opacity: 1;
-  animation-name: fill;
-  animation-duration: 300ms;
-  animation-timing-function: ease-out;
-  animation-iteration-count: 1;
+  animation: fill 300ms ease-out 1;
   color: tomato;
 }
 
