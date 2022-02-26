@@ -64,32 +64,35 @@ input[type="radio"], input[type="checkbox"] {
     appearance: none;
     display: none
 } 
-
-.checked-heart {
+.full-heart {
     opacity: 0;
 }
 #heart1:checked + label,
 #heart2:checked + label,
 #heart3:checked + label,
 #heart4:checked + label {
-    .checked-heart {
+    .full-heart {
         opacity: 1;
-        animation: fill 300ms ease-out 1;
+        transform: scale(1);
         color: tomato;
+        animation: fillNscale 300ms ease-out 1;
     }
 }
-@keyframes fill {
+
+@keyframes fillNscale {
     0% {
-      opacity : 0;
+        transform: scale(0);
+        opacity : 0;
     }
     33% {
-        opacity : 33%;
+        transform: scale(0.7);
     }
     66% {
-        opacity : 66%;
+        transform: scale(1.5);
     }
     100% {
         opacity : 100%;
+        transform: scale(1);
     }
   }
   
