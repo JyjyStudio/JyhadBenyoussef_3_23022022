@@ -23,7 +23,7 @@ a {
     top: 0;
     width: 100%;
     min-height: 100%;
-    animation : scale 3500ms ease-in-out 1;
+    animation : scale 3000ms ease-in-out 1;
     transform: scale(0);
     span {
         z-index: 2;
@@ -32,7 +32,7 @@ a {
         letter-spacing: 2px;
     }
     .spinner-bg {
-        animation : fade 3500ms ease-in-out 1;
+        animation : fade 3000ms ease-in-out 1;
         position : fixed;
         top: 0;
         width: 100%;
@@ -44,7 +44,7 @@ a {
        height : 150px;
        width : 150px;
        border-radius: 50%;
-       animation: rotate 1500ms linear infinite;
+       animation: rotate 3000ms ease-in infinite;
     }
     .spinner:before {
        position: absolute;
@@ -54,31 +54,31 @@ a {
        height: 100%;
        width: 100%;
        border-radius: 50%;
-       box-shadow: 0 0 5px rgba(255,255,255,.3);
+    //    box-shadow: 0 0 5px rgba(255,255,255,.3);
     }
 }
 
 @keyframes rotate {
     0% {
         transform: rotate(0deg);
-        box-shadow : 1px 5px 2px #e65c00;
+        box-shadow : 1px 3px 2px $primary-color;
     }
     50% {
         transform: rotate(180deg);
-        box-shadow : 1px 5px 2px #18b201;
+        box-shadow : 1px 3px 2px $tertiary-color;
     }
     100% {
         transform: rotate(360deg);
-        box-shadow : 1px 5px 2px #0456c8;
+        box-shadow : 1px 3px 2px $secondary-color;
     }
 }
 @keyframes fade {
     0% {
-        background: rgba(#000000, .5);
+        background: rgba(#000000, .6);
         opacity: 1;
     }
-    66% {
-        opacity: .5;
+    90% {
+        opacity: 1;
     }
     100% {
         opacity: 0;
