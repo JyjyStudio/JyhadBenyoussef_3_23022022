@@ -1,7 +1,15 @@
 .restaurants {
+    @include desktop-only {
+        max-width: 1110px;
+        margin: 0 auto;
+    }
     &__title {
         width: 100%;
         padding: 30px 0 0 20px;
+        @include desktop-only {
+            text-align: center;
+            padding: 50px 0;
+        }
     }
     &__grid {
         margin: 20px auto;
@@ -9,8 +17,11 @@
         max-width: 1200px;
         display: grid;
         grid-template-columns: repeat(auto-fill, 90%);
-        justify-content: space-around;
+        justify-content: space-evenly;
         grid-gap: 20px;
+        @include desktop-only {
+            grid-template-columns: repeat(2, 45%);
+        }
     }
     &__card {
         border-radius: 20px;

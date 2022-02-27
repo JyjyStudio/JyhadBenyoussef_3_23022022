@@ -9,6 +9,7 @@
     box-shadow : map-get($shadow, $place);
 }
 
+//si jamais je veux changer le code couleur du site, il suffi de changer couleur primary etc seulement
 @mixin background-shadow($color : $background-color) {
     // background-color: $color; // on fixe le background avant de modifier la valeur de $color
     @if( lightness($color) < 25% ) { //si le background à une couleur claire, l'ombre sera foncée
@@ -29,15 +30,21 @@
         color : adjust-hue($color, 60deg);
       }
     }
-  }
+}
 
-  // change la couleur du background avec une couleur complementaire
-  @mixin hover($color) {
-    @if (hue($color) >= 135 and hue($color) < 180) {
-      $color: complement($color);
-    }@else{
-      $color: adjust-hue($color, -60);
-    }
-    background: $color;
+// change la couleur du background avec une couleur complementaire
+@mixin hover($color) {
+  @if (hue($color) >= 135 and hue($color) < 180) {
+    $color: complement($color);
+  }@else{
+    $color: adjust-hue($color, -60);
   }
-  
+  background: $color;
+}
+
+// Media Queries 
+@mixin desktop-only {
+  @media screen and (min-width: 992px) {
+    @content
+  }
+}

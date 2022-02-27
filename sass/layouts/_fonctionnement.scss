@@ -1,11 +1,47 @@
 .fonctionnement {
-    margin-left: 20px;
+    @include desktop-only {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding-bottom: 20px;
+    }    
     &__title {
-        margin : 30px 0;
+        @include desktop-only {
+            text-align: center;
+            padding: 30px 20px;
+        }
+        padding: 30px 20px 0;
     }
     &__p {
         text-align: center;
         display: inline-block;
+    }
+}
+.btn {
+    display: block;
+    text-align : inherit;
+    border-radius: 10px;
+    margin: 20px auto;
+    position: relative;
+    @include btn;
+    i {
+        color : gray;
+        padding : 0 20px 0 35px;
+    }
+    &:hover {
+        i {
+            color : $primary-color;
+        }
+        background: pastel($primary-color);
+        box-shadow : map-get($shadow, hover-btn);
+    }
+    &--header {
+        border-radius: 25px;
+        margin: 0 auto 10px;
+        @include btn('localisation', #fff, linear-gradient($secondary-color, $primary-color), 220px);
+    }
+    @include desktop-only {
+        text-align: center;
+        margin: 0px auto 40px;
     }
 }
 .number {
