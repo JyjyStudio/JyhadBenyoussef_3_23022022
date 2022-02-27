@@ -5,10 +5,9 @@
   "scripts": {
     "sass": "sass --watch sass:css --no-source-map",
     "sass-compressed": "sass --watch sass:css --style compressed --no-source-map",
-    "sass-prefixed": "postcss css/style.css --use autoprefixer -d css/ --no-map",
     "live-server": "live-server",
-    "sass-live-server-prefixed": "npm-run-all --parallel live-server sass sass-prefixed",
-    "prefix": "postcss css/style.css --use autoprefixer -d css/prefixed/ --no-map"
+    "sass-live-server": "npm-run-all --parallel live-server sass",
+    "prefix": "postcss css/style.css --use autoprefixer -d css --no-map"
   },
   "author": "Jyhad Ben Youssef",
   "license": "ISC",
