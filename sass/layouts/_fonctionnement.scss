@@ -34,11 +34,6 @@
         background: pastel($primary-color);
         box-shadow : map-get($shadow, hover-btn);
     }
-    &--header {
-        border-radius: 25px;
-        margin: 0 auto 10px;
-        @include btn('localisation', #fff, linear-gradient($secondary-color, $primary-color), 220px);
-    }
     @include desktop-only {
         text-align: center;
         margin: 0px auto 40px;
