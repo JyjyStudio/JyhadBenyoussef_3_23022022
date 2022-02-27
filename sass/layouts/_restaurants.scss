@@ -84,9 +84,12 @@ input[type="radio"], input[type="checkbox"] {
 #heart4:checked + label {
     .full-heart {
         opacity: 1;
-        transform: scale(1);
-        color: tomato;
-        animation: fillNscale 300ms ease-out 1;
+        transform: scale(1.1);
+        background: linear-gradient(28deg, $secondary-color 10%, $primary-color 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+	    -webkit-text-fill-color: transparent;
+        animation: fillNscale 600ms ease-out 1;
     }
 }
 
@@ -97,12 +100,13 @@ input[type="radio"], input[type="checkbox"] {
     }
     33% {
         transform: scale(0.7);
+        opacity: 1;
     }
     66% {
         transform: scale(1.5);
     }
     100% {
-        opacity : 100%;
+        opacity : 1;
         transform: scale(1);
     }
   }
