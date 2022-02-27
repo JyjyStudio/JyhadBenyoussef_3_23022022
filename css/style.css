@@ -5,6 +5,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Roboto", arial, sans-serif;
 }
@@ -304,6 +308,21 @@ h1 {
   .btn {
     text-align: center;
     margin: 0px auto 40px;
+  }
+}
+@media screen and (max-width: 326px) {
+  .btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .btn:hover {
+    font-size: 1.2em;
+  }
+  .btn i {
+    padding: 0 13px;
+    font-size: 1.5em;
+    line-height: 20px;
   }
 }
 
