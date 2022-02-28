@@ -1,0 +1,147 @@
+.header {
+    max-width: 1110px;
+    margin: 0 auto;
+    &__arrow {
+        display: inline;
+        position: absolute;
+        left: 25px;
+        top: 20px;
+        font-size: 25px;
+    }
+    &__title {
+        position: relative;
+        &__img {
+            display: block;
+            height: 300px;
+            width: 100%;
+            object-fit: cover;
+        }
+        &__flex {
+            display: flex;
+            justify-content: space-around;
+            background: #f6f6f6;
+            border-radius: 30px 30px 0 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            @include desktop-only {
+                justify-content: space-between;
+            }
+            @include small-phones {    
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+        &__flex__title {
+            font-family: 'shrikhand', arial, sans-serif;
+            font-size: 1.7em;
+            font-weight: 100;
+            margin: 0;
+            padding: 20px 0;
+            @include small-phones {
+                padding-bottom: 0;
+            }
+            @include desktop-only {
+                padding: 20px 30px;
+            }
+        }
+        label {
+            height: 50px;
+        }
+        &__flex__heart {
+            font-size: 30px;
+            position: absolute;
+            right: 25px;
+            top : 20px;
+            @include small-phones {
+                position: absolute;
+                right: 45%;
+                top: 60px;
+            }
+        }
+        &__flex__full-heart {
+            position: absolute;
+            font-size: 32px;
+            right: 25px;
+            top: 20px;
+            @include small-phones {
+                font-size: 32px;
+                top: 60px;
+                right: 45%;
+            }
+        }
+    }
+}
+
+.card {
+    @include small-phones {
+        padding: 10px 20px;
+    }
+    background: #f6f6f6;
+    padding: 10px 30px;
+    max-width: 1110px;
+    margin: 0 auto;
+    &__title {
+        text-transform: uppercase;
+        font-weight: 100;
+        border-bottom: 4px $tertiary-color solid;
+        width: 45px;
+        margin-bottom: 15px;
+        padding-bottom: 5px;
+    }
+    &__title1 {
+        animation : animation-titres 1s ease-in-out 1;
+    }
+    &__title2 {
+        animation : animation-titres 2s ease-in-out 1;
+    }
+    &__title3 {
+        animation : animation-titres 3s ease-in-out 1;
+    }
+    &__menu {
+        display: flex;
+        justify-content: space-between;
+        background: #fff;
+        padding: 10px;
+        border-radius: 15px;
+        box-shadow: map-get($shadow, card);
+        margin-bottom: 10px;
+        cursor: pointer;
+        &:hover {
+            box-shadow: map-get($shadow, hover-card);
+            //afficher icone validation et ellipser le texte
+        }
+        &__content {
+            min-width: 0%;
+            display: flex;
+            flex-direction: column;
+            &__title {
+                font-weight: 400;
+                padding-bottom: 5px;
+            }
+            &__description {
+                font-weight: 100;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+        &__price {
+            font-weight: 400;
+            align-self: self-end;
+            padding-left: 20px;
+        }
+    }
+    &__menu1 {
+        animation : opacity-menus 2s ease-in-out 1;
+    }
+    &__menu2 {
+        animation : opacity-menus 3200ms ease-in-out 1;
+    }
+    &__menu3 {
+        animation : opacity-menus 5000ms ease-in-out 1;
+    }
+    button {
+        animation : opacity-menus 5500ms ease-in-out 1;
+    }
+}
