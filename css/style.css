@@ -59,8 +59,8 @@ a {
   height: 150px;
   width: 150px;
   border-radius: 50%;
-  -webkit-animation: rotate 3000ms ease-in infinite;
-          animation: rotate 3000ms ease-in infinite;
+  -webkit-animation: rotate-spinner 3000ms ease-in infinite;
+          animation: rotate-spinner 3000ms ease-in infinite;
 }
 .spinner-container .spinner:before {
   position: absolute;
@@ -72,7 +72,7 @@ a {
   border-radius: 50%;
 }
 
-@-webkit-keyframes rotate {
+@-webkit-keyframes rotate-spinner {
   0% {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
@@ -93,7 +93,7 @@ a {
   }
 }
 
-@keyframes rotate {
+@keyframes rotate-spinner {
   0% {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
@@ -111,6 +111,26 @@ a {
             transform: rotate(360deg);
     -webkit-box-shadow: 1px 3px 2px #FF79DA;
             box-shadow: 1px 3px 2px #FF79DA;
+  }
+}
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 @-webkit-keyframes fade {
@@ -670,6 +690,7 @@ footer i {
   }
 }
 .header__title__flex__full-heart {
+  cursor: pointer;
   position: absolute;
   font-size: 32px;
   right: 25px;
@@ -722,26 +743,56 @@ footer i {
       -ms-flex-pack: justify;
           justify-content: space-between;
   background: #fff;
-  padding: 10px;
   border-radius: 15px;
   -webkit-box-shadow: 0 3px 7px #d0d0d0;
           box-shadow: 0 3px 7px #d0d0d0;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  min-height: 80px;
   cursor: pointer;
+  position: relative;
+}
+@media screen and (max-width: 365px) {
+  .card__menu {
+    min-height: 120px;
+  }
 }
 .card__menu:hover {
   -webkit-box-shadow: 0 3px 7px #b6b6b6;
           box-shadow: 0 3px 7px #b6b6b6;
 }
+.card__menu:hover .card__menu__content__description {
+  font-weight: 100;
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+}
+.card__menu:hover .card__menu__valid {
+  padding: 0 40px;
+  -webkit-transform: scaleX(1);
+      -ms-transform: scaleX(1);
+          transform: scaleX(1);
+  border-radius: 0 15px 15px 0;
+  -webkit-transform-origin: right;
+      -ms-transform-origin: right;
+          transform-origin: right;
+}
+.card__menu:hover .card__menu__valid i {
+  -webkit-animation: rotate 600ms ease 400ms;
+          animation: rotate 600ms ease 400ms;
+}
 .card__menu__content {
+  padding: 10px;
   min-width: 0%;
+  width: 100%;
+}
+.card__menu__content__descriptionNprice {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .card__menu__content__title {
   font-weight: 400;
@@ -749,16 +800,39 @@ footer i {
 }
 .card__menu__content__description {
   font-weight: 100;
-  white-space: nowrap;
-  overflow: hidden;
-  -o-text-overflow: ellipsis;
-     text-overflow: ellipsis;
 }
 .card__menu__price {
   font-weight: 400;
-  -ms-flex-item-align: self-end;
-      align-self: self-end;
   padding-left: 20px;
+}
+.card__menu__valid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 100px;
+  border-radius: 0 15px 15px 0;
+  background: #99E2D0;
+  -webkit-transform: scaleX(0);
+      -ms-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+      -ms-transform-origin: 100% 50%;
+          transform-origin: 100% 50%;
+  -webkit-transition: -webkit-transform 600ms ease-in;
+  transition: -webkit-transform 600ms ease-in;
+  -o-transition: transform 600ms ease-in;
+  transition: transform 600ms ease-in;
+  transition: transform 600ms ease-in, -webkit-transform 600ms ease-in;
+}
+.card__menu__valid i {
+  background: #99E2D0;
+  color: #fff;
 }
 .card__menu1 {
   -webkit-animation: opacity-menus 2s ease-in-out 1;
