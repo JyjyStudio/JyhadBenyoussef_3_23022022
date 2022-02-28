@@ -46,7 +46,7 @@ a {
        height : 150px;
        width : 150px;
        border-radius: 50%;
-       animation: rotate 3000ms ease-in infinite;
+       animation: rotate-spinner 3000ms ease-in infinite;
     }
     .spinner:before {
        position: absolute;
@@ -60,7 +60,7 @@ a {
     }
 }
 
-@keyframes rotate {
+@keyframes rotate-spinner {
     0% {
         transform: rotate(0deg);
         box-shadow : 1px 3px 2px $primary-color;
@@ -74,6 +74,15 @@ a {
         box-shadow : 1px 3px 2px $secondary-color;
     }
 }
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 @keyframes fade {
     0% {
         background: rgba(#000000, .6);
