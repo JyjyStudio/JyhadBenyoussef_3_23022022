@@ -48,15 +48,21 @@ h1 {
     &__text {
         font-weight: 100;
     }
-    .btn {
-        &--header {
-            border-radius: 25px;
+}
+.btn {
+    &--gradient {
+        display: block;
+        border-radius: 25px;
+        @include btn('localisation', #fff, linear-gradient($secondary-color, $primary-color), 220px);
+        &:hover {
+            background: linear-gradient(lighten($secondary-color, 5%), lighten($primary-color, 5%));
+            box-shadow: map-get($shadow, hover-btn)
+        }
+        &--homepage {
             margin: 0 auto 10px;
-            @include btn('localisation', #fff, linear-gradient($secondary-color, $primary-color), 220px);
-            &:hover {
-                background: linear-gradient(lighten($secondary-color, 5%), lighten($primary-color, 5%));
-                box-shadow: map-get($shadow, hover-btn)
-            }
+        }
+        &--card {
+            margin: 30px auto;
         }
     }
 }
