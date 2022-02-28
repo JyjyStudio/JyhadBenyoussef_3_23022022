@@ -50,7 +50,7 @@
 }
 
 @mixin small-phones {
-  @media screen and (max-width: 326px) {
+  @media screen and (max-width: 365px) { // precedement 326px
     @content
   }
 }
