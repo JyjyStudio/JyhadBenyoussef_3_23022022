@@ -93,22 +93,3 @@ input[type="radio"], input[type="checkbox"] {
         transform-origin: 50% 100%;
     }
 }
-
-@keyframes fillNscale {
-    0% {
-        transform: scale(0);
-        opacity : 0;
-    }
-    33% {
-        transform: scale(0.7);
-        opacity: 1;
-    }
-    66% {
-        transform: scale(1.5);
-    }
-    100% {
-        opacity : 1;
-        transform: scale(1);
-    }
-  }
-  
