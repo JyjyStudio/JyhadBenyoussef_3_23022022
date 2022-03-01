@@ -1,11 +1,14 @@
 // Bouton
 @mixin btn ($place : 'btn', $color : #000, $background : $background-color, $width : 90%) {
+    display: block;
     cursor: pointer;
     color: $color;
     background: $background;
+    border-radius: 25px;
     width: $width;
     padding: 15px;
     border: none;
+    position: relative;
     box-shadow : map-get($shadow, $place);
 }
 
