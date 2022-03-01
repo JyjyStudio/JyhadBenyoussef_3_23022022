@@ -107,6 +107,7 @@
         box-shadow: map-get($shadow, card);
         margin-bottom: 20px;
         min-height: 80px;
+        overflow: hidden;
         @include small-phones {
             min-height: 120px;
         }
@@ -115,22 +116,20 @@
         &:hover {
             box-shadow: map-get($shadow, hover-card);
             //afficher icone validation et ellipser le texte
-            & .card__menu__content__description {
+            .card__menu__content__description {
                 font-weight: 100;
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
             }
             .card__menu__valid {
-                // width: 20%;
-                padding: 0 40px;
+                width: 100px;
                 transform: scaleX(1);
-                border-radius: 0 15px 15px 0;
-                transform-origin: right;
                 & i {
-                    animation: rotate 600ms ease 400ms;
+                    animation: rotate 300ms linear 200ms;
                 }
             }
+
         }
         &__content {
             padding: 10px;
@@ -160,11 +159,12 @@
             border-radius: 0 15px 15px 0;
             background: $tertiary-color;
             transform: scaleX(0);
-            transform-origin: 100% 50%;
-            transition: transform 600ms ease-in;
+            transform-origin: right;
+            transition: transform 400ms linear;
             i {
                 background: $tertiary-color;
                 color: #fff;
+                font-size: 1.5em;
             }
         }
     }
