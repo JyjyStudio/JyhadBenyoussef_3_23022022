@@ -90,14 +90,10 @@
         margin-bottom: 15px;
         padding-bottom: 5px;
     }
-    &__title1 {
-        animation : animation-titres 1s ease-in-out 1;
-    }
-    &__title2 {
-        animation : animation-titres 2s ease-in-out 1;
-    }
-    &__title3 {
-        animation : animation-titres 3s ease-in-out 1;
+    @for $i from 1 through 3 {
+        &__title#{$i} {
+            animation : animation-titres 1s ease-in-out ($i)-1s backwards;
+        }
     }
     &__menu {
         display: flex;
@@ -109,13 +105,13 @@
         min-height: 80px;
         overflow: hidden;
         @include small-phones {
-            min-height: 120px;
+            min-height: 100px;
         }
         cursor: pointer;
         position: relative;
         &:hover {
             box-shadow: map-get($shadow, hover-card);
-            //afficher icone validation et ellipser le texte
+            //animation validation et reduit le texte si besoin
             .card__menu__content__description {
                 font-weight: 100;
                 white-space: nowrap;
@@ -129,7 +125,6 @@
                     animation: rotate 300ms linear 200ms;
                 }
             }
-
         }
         &__content {
             padding: 10px;
@@ -138,6 +133,8 @@
             &__descriptionNprice {
                 display: flex;
                 justify-content: space-between;
+                align-items: end;
+                padding-top: 10px;
             }
             &__title {
                 font-weight: 400;
@@ -156,6 +153,7 @@
             justify-content: center;
             align-items: center;
             max-width: 100px;
+            width: 30px;
             border-radius: 0 15px 15px 0;
             background: $tertiary-color;
             transform: scaleX(0);
@@ -168,16 +166,12 @@
             }
         }
     }
-    &__menu1 {
-        animation : opacity-menus 2s ease-in-out 1;
-    }
-    &__menu2 {
-        animation : opacity-menus 3200ms ease-in-out 1;
-    }
-    &__menu3 {
-        animation : opacity-menus 5000ms ease-in-out 1;
+    @for $i from 1 through 3 {
+        &__menu#{$i} {
+            animation : opacity-menus 2s ease-in-out ($i)-1s backwards;
+        }
     }
     button {
-        animation : opacity-menus 5500ms ease-in-out 1;
+        animation : opacity-menus 2s ease-in-out 2500ms backwards;
     }
 }
