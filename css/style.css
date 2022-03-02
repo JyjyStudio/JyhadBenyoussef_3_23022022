@@ -502,16 +502,16 @@ input[type=radio], input[type=checkbox] {
   padding-bottom: 5px;
 }
 .card__title1 {
-  -webkit-animation: animation-titres 1s ease-in-out 1;
-          animation: animation-titres 1s ease-in-out 1;
+  -webkit-animation: animation-titres 1s ease-in-out 0s backwards;
+          animation: animation-titres 1s ease-in-out 0s backwards;
 }
 .card__title2 {
-  -webkit-animation: animation-titres 2s ease-in-out 1;
-          animation: animation-titres 2s ease-in-out 1;
+  -webkit-animation: animation-titres 1s ease-in-out 1s backwards;
+          animation: animation-titres 1s ease-in-out 1s backwards;
 }
 .card__title3 {
-  -webkit-animation: animation-titres 3s ease-in-out 1;
-          animation: animation-titres 3s ease-in-out 1;
+  -webkit-animation: animation-titres 1s ease-in-out 2s backwards;
+          animation: animation-titres 1s ease-in-out 2s backwards;
 }
 .card__menu {
   display: -webkit-box;
@@ -532,7 +532,7 @@ input[type=radio], input[type=checkbox] {
 }
 @media screen and (max-width: 365px) {
   .card__menu {
-    min-height: 120px;
+    min-height: 100px;
   }
 }
 .card__menu:hover {
@@ -568,6 +568,10 @@ input[type=radio], input[type=checkbox] {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  padding-top: 10px;
 }
 .card__menu__content__title {
   font-weight: 400;
@@ -591,6 +595,7 @@ input[type=radio], input[type=checkbox] {
       -ms-flex-align: center;
           align-items: center;
   max-width: 100px;
+  width: 30px;
   border-radius: 0 15px 15px 0;
   background: #99E2D0;
   -webkit-transform: scaleX(0);
@@ -611,20 +616,20 @@ input[type=radio], input[type=checkbox] {
   font-size: 1.5em;
 }
 .card__menu1 {
-  -webkit-animation: opacity-menus 2s ease-in-out 1;
-          animation: opacity-menus 2s ease-in-out 1;
+  -webkit-animation: opacity-menus 2s ease-in-out 0s backwards;
+          animation: opacity-menus 2s ease-in-out 0s backwards;
 }
 .card__menu2 {
-  -webkit-animation: opacity-menus 3200ms ease-in-out 1;
-          animation: opacity-menus 3200ms ease-in-out 1;
+  -webkit-animation: opacity-menus 2s ease-in-out 1s backwards;
+          animation: opacity-menus 2s ease-in-out 1s backwards;
 }
 .card__menu3 {
-  -webkit-animation: opacity-menus 5000ms ease-in-out 1;
-          animation: opacity-menus 5000ms ease-in-out 1;
+  -webkit-animation: opacity-menus 2s ease-in-out 2s backwards;
+          animation: opacity-menus 2s ease-in-out 2s backwards;
 }
 .card button {
-  -webkit-animation: opacity-menus 5500ms ease-in-out 1;
-          animation: opacity-menus 5500ms ease-in-out 1;
+  -webkit-animation: opacity-menus 2s ease-in-out 2500ms backwards;
+          animation: opacity-menus 2s ease-in-out 2500ms backwards;
 }
 
 footer {
