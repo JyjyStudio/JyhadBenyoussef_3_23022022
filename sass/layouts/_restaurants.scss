@@ -26,6 +26,9 @@
     &__card {
         border-radius: 20px;
         box-shadow: map-get($shadow, card);
+        &:hover {
+            box-shadow: 0 0px 7px 4px #b6b6b6;
+        }
         &--new{
             position: relative;
             span {
