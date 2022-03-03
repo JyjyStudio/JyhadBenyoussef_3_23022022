@@ -90,10 +90,20 @@
         margin-bottom: 15px;
         padding-bottom: 5px;
     }
-    @for $i from 1 through 3 {
-        &__title#{$i} {
-            animation : animation-titres 1s ease-in-out ($i)-1s backwards;
-        }
+    &__title1 {
+        animation : animation-titres .7s ease-in-out backwards;
+    }
+    &__title2 {
+        animation : animation-titres .7s ease-in-out 2.1s backwards;
+    }
+    &__title3 {
+        animation : animation-titres .7s ease-in-out 3.6s backwards;
+    }
+    &__title4 {
+        animation : animation-titres .7s ease-in-out 2.6s backwards;
+    }
+    &__title5 {
+        animation : animation-titres .7s ease-in-out 4.1s backwards;
     }
     &__menu {
         display: flex;
@@ -120,7 +130,7 @@
             }
             .card__menu__valid {
                 width: 100px;
-                transform: scaleX(1);
+                right: 0;
                 & i {
                     animation: rotate 300ms linear 200ms;
                 }
@@ -153,12 +163,12 @@
             justify-content: center;
             align-items: center;
             max-width: 100px;
-            width: 30px;
+            width: 0px;
+            position: relative;
+            right: -16px;
+            transition: position 450ms linear, width 300ms linear;
             border-radius: 0 15px 15px 0;
             background: $tertiary-color;
-            transform: scaleX(0);
-            transform-origin: right;
-            transition: transform 400ms linear;
             i {
                 background: $tertiary-color;
                 color: #fff;
@@ -166,12 +176,14 @@
             }
         }
     }
-    @for $i from 1 through 3 {
+    @for $i from 1 through 10 {
         &__menu#{$i} {
-            animation : opacity-menus 2s ease-in-out ($i)-1s backwards;
+            animation : opacity-menus 1.5s ease-in-out #{$i/2}s both;
+            transform: translateY(20px);
         }
     }
     button {
-        animation : opacity-menus 2s ease-in-out 2500ms backwards;
+        animation : opacity-menus 2s ease-in-out 5s backwards;
     }
 }
+

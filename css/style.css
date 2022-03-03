@@ -315,6 +315,10 @@ h1 {
   -webkit-box-shadow: 0 3px 7px #d0d0d0;
           box-shadow: 0 3px 7px #d0d0d0;
 }
+.restaurants__card:hover {
+  -webkit-box-shadow: 0 0px 7px 4px #b6b6b6;
+          box-shadow: 0 0px 7px 4px #b6b6b6;
+}
 .restaurants__card--new {
   position: relative;
 }
@@ -502,16 +506,24 @@ input[type=radio], input[type=checkbox] {
   padding-bottom: 5px;
 }
 .card__title1 {
-  -webkit-animation: animation-titres 1s ease-in-out 0s backwards;
-          animation: animation-titres 1s ease-in-out 0s backwards;
+  -webkit-animation: animation-titres 0.7s ease-in-out backwards;
+          animation: animation-titres 0.7s ease-in-out backwards;
 }
 .card__title2 {
-  -webkit-animation: animation-titres 1s ease-in-out 1s backwards;
-          animation: animation-titres 1s ease-in-out 1s backwards;
+  -webkit-animation: animation-titres 0.7s ease-in-out 2.1s backwards;
+          animation: animation-titres 0.7s ease-in-out 2.1s backwards;
 }
 .card__title3 {
-  -webkit-animation: animation-titres 1s ease-in-out 2s backwards;
-          animation: animation-titres 1s ease-in-out 2s backwards;
+  -webkit-animation: animation-titres 0.7s ease-in-out 3.6s backwards;
+          animation: animation-titres 0.7s ease-in-out 3.6s backwards;
+}
+.card__title4 {
+  -webkit-animation: animation-titres 0.7s ease-in-out 2.6s backwards;
+          animation: animation-titres 0.7s ease-in-out 2.6s backwards;
+}
+.card__title5 {
+  -webkit-animation: animation-titres 0.7s ease-in-out 4.1s backwards;
+          animation: animation-titres 0.7s ease-in-out 4.1s backwards;
 }
 .card__menu {
   display: -webkit-box;
@@ -548,9 +560,7 @@ input[type=radio], input[type=checkbox] {
 }
 .card__menu:hover .card__menu__valid {
   width: 100px;
-  -webkit-transform: scaleX(1);
-      -ms-transform: scaleX(1);
-          transform: scaleX(1);
+  right: 0;
 }
 .card__menu:hover .card__menu__valid i {
   -webkit-animation: rotate 300ms linear 200ms;
@@ -595,20 +605,14 @@ input[type=radio], input[type=checkbox] {
       -ms-flex-align: center;
           align-items: center;
   max-width: 100px;
-  width: 30px;
+  width: 0px;
+  position: relative;
+  right: -16px;
+  -webkit-transition: position 450ms linear, width 300ms linear;
+  -o-transition: position 450ms linear, width 300ms linear;
+  transition: position 450ms linear, width 300ms linear;
   border-radius: 0 15px 15px 0;
   background: #99E2D0;
-  -webkit-transform: scaleX(0);
-      -ms-transform: scaleX(0);
-          transform: scaleX(0);
-  -webkit-transform-origin: right;
-      -ms-transform-origin: right;
-          transform-origin: right;
-  -webkit-transition: -webkit-transform 400ms linear;
-  transition: -webkit-transform 400ms linear;
-  -o-transition: transform 400ms linear;
-  transition: transform 400ms linear;
-  transition: transform 400ms linear, -webkit-transform 400ms linear;
 }
 .card__menu__valid i {
   background: #99E2D0;
@@ -616,20 +620,78 @@ input[type=radio], input[type=checkbox] {
   font-size: 1.5em;
 }
 .card__menu1 {
-  -webkit-animation: opacity-menus 2s ease-in-out 0s backwards;
-          animation: opacity-menus 2s ease-in-out 0s backwards;
+  -webkit-animation: opacity-menus 1.5s ease-in-out 0.5s both;
+          animation: opacity-menus 1.5s ease-in-out 0.5s both;
+  -webkit-transform: translateY(20px);
+      -ms-transform: translateY(20px);
+          transform: translateY(20px);
 }
 .card__menu2 {
-  -webkit-animation: opacity-menus 2s ease-in-out 1s backwards;
-          animation: opacity-menus 2s ease-in-out 1s backwards;
+  -webkit-animation: opacity-menus 1.5s ease-in-out 1s both;
+          animation: opacity-menus 1.5s ease-in-out 1s both;
+  -webkit-transform: translateY(20px);
+      -ms-transform: translateY(20px);
+          transform: translateY(20px);
 }
 .card__menu3 {
-  -webkit-animation: opacity-menus 2s ease-in-out 2s backwards;
-          animation: opacity-menus 2s ease-in-out 2s backwards;
+  -webkit-animation: opacity-menus 1.5s ease-in-out 1.5s both;
+          animation: opacity-menus 1.5s ease-in-out 1.5s both;
+  -webkit-transform: translateY(20px);
+      -ms-transform: translateY(20px);
+          transform: translateY(20px);
+}
+.card__menu4 {
+  -webkit-animation: opacity-menus 1.5s ease-in-out 2s both;
+          animation: opacity-menus 1.5s ease-in-out 2s both;
+  -webkit-transform: translateY(20px);
+      -ms-transform: translateY(20px);
+          transform: translateY(20px);
+}
+.card__menu5 {
+  -webkit-animation: opacity-menus 1.5s ease-in-out 2.5s both;
+          animation: opacity-menus 1.5s ease-in-out 2.5s both;
+  -webkit-transform: translateY(20px);
+      -ms-transform: translateY(20px);
+          transform: translateY(20px);
+}
+.card__menu6 {
+  -webkit-animation: opacity-menus 1.5s ease-in-out 3s both;
+          animation: opacity-menus 1.5s ease-in-out 3s both;
+  -webkit-transform: translateY(20px);
+      -ms-transform: translateY(20px);
+          transform: translateY(20px);
+}
+.card__menu7 {
+  -webkit-animation: opacity-menus 1.5s ease-in-out 3.5s both;
+          animation: opacity-menus 1.5s ease-in-out 3.5s both;
+  -webkit-transform: translateY(20px);
+      -ms-transform: translateY(20px);
+          transform: translateY(20px);
+}
+.card__menu8 {
+  -webkit-animation: opacity-menus 1.5s ease-in-out 4s both;
+          animation: opacity-menus 1.5s ease-in-out 4s both;
+  -webkit-transform: translateY(20px);
+      -ms-transform: translateY(20px);
+          transform: translateY(20px);
+}
+.card__menu9 {
+  -webkit-animation: opacity-menus 1.5s ease-in-out 4.5s both;
+          animation: opacity-menus 1.5s ease-in-out 4.5s both;
+  -webkit-transform: translateY(20px);
+      -ms-transform: translateY(20px);
+          transform: translateY(20px);
+}
+.card__menu10 {
+  -webkit-animation: opacity-menus 1.5s ease-in-out 5s both;
+          animation: opacity-menus 1.5s ease-in-out 5s both;
+  -webkit-transform: translateY(20px);
+      -ms-transform: translateY(20px);
+          transform: translateY(20px);
 }
 .card button {
-  -webkit-animation: opacity-menus 2s ease-in-out 2500ms backwards;
-          animation: opacity-menus 2s ease-in-out 2500ms backwards;
+  -webkit-animation: opacity-menus 2s ease-in-out 5s backwards;
+          animation: opacity-menus 2s ease-in-out 5s backwards;
 }
 
 footer {
@@ -862,6 +924,8 @@ footer i {
   }
   100% {
     opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
 }
 @keyframes opacity-menus {
@@ -873,5 +937,7 @@ footer i {
   }
   100% {
     opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
 }
