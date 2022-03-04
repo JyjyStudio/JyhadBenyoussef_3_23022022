@@ -731,6 +731,16 @@ footer i {
     border-radius: 0 0 20px 20px;
   }
 }
+@media screen and (min-width: 780px) {
+  footer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
 
 @-webkit-keyframes rotate-spinner {
   0% {

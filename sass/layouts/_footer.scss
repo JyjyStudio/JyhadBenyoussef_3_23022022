@@ -25,4 +25,9 @@ footer {
         margin: 0 auto;
         border-radius: 0 0 20px 20px;
     }
+    //footer sur une ligne à partir de 780px
+    @media screen and (min-width:780px) {
+        flex-direction: row;
+        justify-content: space-around;
+    }
 }
