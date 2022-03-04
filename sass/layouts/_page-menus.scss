@@ -178,7 +178,7 @@
     }
     @for $i from 1 through 10 {
         &__menu#{$i} {
-            animation : opacity-menus 1.5s ease-in-out #{$i/2}s both;
+            animation : opacity-menus 1.5s ease-in-out #{calc($i/2)}s both;
             transform: translateY(20px);
         }
     }
