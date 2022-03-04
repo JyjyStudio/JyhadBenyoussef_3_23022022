@@ -369,6 +369,7 @@ input[type=radio], input[type=checkbox] {
   opacity: 0;
 }
 
+#heart:checked + label .full-heart,
 #heart1:checked + label .full-heart,
 #heart2:checked + label .full-heart,
 #heart3:checked + label .full-heart,
@@ -384,9 +385,14 @@ input[type=radio], input[type=checkbox] {
   -webkit-text-fill-color: transparent;
   -webkit-animation: fillNscale 600ms ease-out 1;
           animation: fillNscale 600ms ease-out 1;
-  -webkit-transform-origin: 50% 100%;
-      -ms-transform-origin: 50% 100%;
-          transform-origin: 50% 100%;
+  -webkit-transform-origin: bottom;
+      -ms-transform-origin: bottom;
+          transform-origin: bottom;
+  font-size: 29px;
+}
+
+#heart:checked + label .full-heart {
+  font-size: 32px;
 }
 
 .header {
