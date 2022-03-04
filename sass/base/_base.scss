@@ -82,14 +82,4 @@ a {
        border-radius: 50%;
        animation: rotate-spinner 3000ms ease-in infinite;
     }
-    .spinner:before {
-       position: absolute;
-       content : '';
-       left: 0;
-       top: 0;
-       height: 100%;
-       width: 100%;
-       border-radius: 50%;
-    //    box-shadow: 0 0 5px rgba(255,255,255,.3);
-    }
 }
