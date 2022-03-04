@@ -18,6 +18,51 @@ a {
   text-decoration: none;
 }
 
+.spinner-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  min-height: 100%;
+  -webkit-animation: scale 3000ms ease-in-out 1;
+          animation: scale 3000ms ease-in-out 1;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+}
+.spinner-container span {
+  z-index: 2;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.spinner-container .spinner-bg {
+  -webkit-animation: fade 3000ms ease-in-out 1;
+          animation: fade 3000ms ease-in-out 1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  min-height: 100%;
+}
+.spinner-container .spinner {
+  background: white;
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  -webkit-animation: rotate-spinner 3000ms ease-in infinite;
+          animation: rotate-spinner 3000ms ease-in infinite;
+}
+
 .btn--gradient {
   z-index: 0;
   display: block;
@@ -63,51 +108,6 @@ a {
 }
 .btn--gradient--card {
   margin: 30px auto;
-}
-
-.spinner-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  min-height: 100%;
-  -webkit-animation: scale 3000ms ease-in-out 1;
-          animation: scale 3000ms ease-in-out 1;
-  -webkit-transform: scale(0);
-      -ms-transform: scale(0);
-          transform: scale(0);
-}
-.spinner-container span {
-  z-index: 2;
-  font-size: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-.spinner-container .spinner-bg {
-  -webkit-animation: fade 3000ms ease-in-out 1;
-          animation: fade 3000ms ease-in-out 1;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  min-height: 100%;
-}
-.spinner-container .spinner {
-  background: white;
-  position: absolute;
-  height: 150px;
-  width: 150px;
-  border-radius: 50%;
-  -webkit-animation: rotate-spinner 3000ms ease-in infinite;
-          animation: rotate-spinner 3000ms ease-in infinite;
 }
 
 h1 {
@@ -384,6 +384,54 @@ input[type=radio], input[type=checkbox] {
 
 #heart:checked + label .full-heart {
   font-size: 32px;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #353535;
+  padding: 20px;
+  color: #fff;
+  font-weight: 100;
+}
+footer h3 {
+  font-family: "shrikhand", arial, sans-serif;
+  font-weight: 100;
+  padding-bottom: 20px;
+}
+@media screen and (min-width: 992px) {
+  footer h3 {
+    text-align: center;
+  }
+}
+footer p {
+  padding-bottom: 10px;
+}
+footer i {
+  width: 25px;
+  padding-right: 10px;
+}
+@media screen and (min-width: 992px) {
+  footer {
+    max-width: 1110px;
+    margin: 0 auto;
+    border-radius: 0 0 20px 20px;
+  }
+}
+@media screen and (min-width: 780px) {
+  footer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
 }
 
 .header {
@@ -689,54 +737,6 @@ input[type=radio], input[type=checkbox] {
 .card button {
   -webkit-animation: opacity-menus 2s ease-in-out 5s backwards;
           animation: opacity-menus 2s ease-in-out 5s backwards;
-}
-
-footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background-color: #353535;
-  padding: 20px;
-  color: #fff;
-  font-weight: 100;
-}
-footer h3 {
-  font-family: "shrikhand", arial, sans-serif;
-  font-weight: 100;
-  padding-bottom: 20px;
-}
-@media screen and (min-width: 992px) {
-  footer h3 {
-    text-align: center;
-  }
-}
-footer p {
-  padding-bottom: 10px;
-}
-footer i {
-  width: 25px;
-  padding-right: 10px;
-}
-@media screen and (min-width: 992px) {
-  footer {
-    max-width: 1110px;
-    margin: 0 auto;
-    border-radius: 0 0 20px 20px;
-  }
-}
-@media screen and (min-width: 780px) {
-  footer {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
 }
 
 @-webkit-keyframes rotate-spinner {

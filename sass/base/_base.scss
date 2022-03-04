@@ -14,40 +14,6 @@ a {
     text-decoration: none;
 }
 
-// btn component
-.btn {
-    &--gradient {
-        z-index: 0;
-        @include btn('localisation', #fff, linear-gradient($secondary-color, $primary-color), 220px);
-        &:hover {
-            &::after {
-                opacity: 1;
-            }
-            box-shadow: map-get($shadow, hover-btn);
-        }
-        // pour éviter de changer la couleur (animer la couleur d’une propriété déclenche des calculs de paint -> moins performant), 
-        // on utilise la propriété opacity sur le ::after 
-        // cela nous permet de faire des transitions entre des couleurs en évitant ces calculs (etape composition et non paint du rendu css)
-        &::after { 
-            content: "";
-            border-radius: 25px;
-            position: absolute;
-            top: 0; right: 0; bottom: 0; left: 0;
-            background: linear-gradient(lighten($secondary-color, 5%), lighten($primary-color, 5%));
-            opacity: 0;
-            z-index: -1;
-            transition: opacity 250ms;
-        }
-        &--homepage {
-            margin: 0 auto 10px;
-        }
-        &--card {
-            margin: 30px auto;
-        }
-    }
-}
-
-
 //spinner animation on load 
 
 .spinner-container {
