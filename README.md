@@ -9,5 +9,5 @@ Projet 3 de la formation Openclassrooms qui a pour objectif de travailler sur de
 - Utiliser un système de gestion de versions pour le suivi du projet et son hébergement
 
 ### Liens utiles
-- [Live demo 🌍](https://jyjystudio.github.io/Ohmyfood-P3-OpenClassrooms) 
+- [Live demo 🌍](https://jyjystudio.github.io/ohmyfood/) 
 - [Maquettes 🖼️](https://github.com/JyjyStudio/Ohmyfood-P3-OpenClassrooms/tree/main/images/maquettes)
